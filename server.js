@@ -47,7 +47,7 @@ app.post("/otp", async (req, res) => {
         ? `Hi ${firstName} ${lastName} this is your otp ${otp}`
         : `${value} ${otp}`,
       to: "+919834540106", // Text this number
-      from: "+18507794933", // From a valid Twilio number
+      from: "+19788177752", // From a valid Twilio number
     })
     .then(async () => {
       const date = moment().format("MMMM Do YYYY, h:mm:ss a");
@@ -83,7 +83,7 @@ app.post("/otp", async (req, res) => {
       }
       res.sendStatus(200); // sending 200 status code
     })
-    .catch((error) => res.sendStatus(404)); // handling errors
+    .catch((error) => {console.log(error);res.sendStatus(404)}); // handling errors
 });
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));

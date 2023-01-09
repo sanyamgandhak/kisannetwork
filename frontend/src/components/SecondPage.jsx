@@ -145,8 +145,7 @@ function SecondPage(param) {
             autoFocus
             margin="dense"
             id="name"
-            label="Customized message goes here (only numbers not allowed) "
-            type="text"
+            label="Customized message goes here"
             fullWidth
             variant="standard"
             onChange={(e) => setValue(e.target.value)}
